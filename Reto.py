@@ -1,13 +1,14 @@
 from tkinter import ttk
 from tkinter import *
 
+
 class Registro:
 
     def __init__(self, window):
         self.wind = window
         self.wind.title("Cacharreria Universal")
 
-        # Creación de contaimer
+        # Creación de frame o contaimer
         frame = LabelFrame(self.wind, text= "Registro Usuarios")
         frame.grid(row= 0, column= 0, columnspan= 4, pady= 2)
         frame.config(width= 400, height= 200, bd= 0)
@@ -43,8 +44,12 @@ class Registro:
         self.producto = Entry(frame)
         self.producto.grid(row= 6, column= 1, pady= 2)
 
-        #Seccion boton
+        #Seccion boton guardar
         ttk.Button(frame, text= "Guardar").grid(row= 7, columnspan= 2, sticky= W + E)
+
+        #Seccion boton enviar correos
+        ttk.Button(frame, text= "Enviar correo").grid(row= 8, columnspan= 2, sticky= W + E)
+
 
 if __name__ == '__main__':
     window = Tk()
