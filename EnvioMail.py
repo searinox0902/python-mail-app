@@ -23,18 +23,31 @@ class EnvioMail:
         cal = DateEntry(frame, width= 16, background= "#696969", foreground= "#696969", bd=1)
         cal.grid(row=3, column= 0, pady= 4)
 
-        # Seccion ciudad
+        # city
         Label(frame, text= "Ciudad: ").grid(row= 4, column= 0)
         self.ciudad = Entry(frame)
         self.ciudad.grid(row= 5, column= 0, pady= 2)
 
-        # Seccion producto
+        # id item
         Label(frame, text= "Id Producto: ").grid(row=6, column= 0)
         self.producto = Entry(frame)
         self.producto.grid(row= 7, column= 0, pady= 2)
 
-        #Seccion boton
-        ttk.Button(frame, text= "Enviar Mail").grid(row= 8, columnspan= 2, sticky= W + E, pady=10)
+        # edad
+        Label(frame, text= "Id Edad: ").grid(row=8, column= 0)
+        self.edad = Entry(frame)
+        self.edad.grid(row= 9, column= 0, pady= 2)
+        
+        # textarea
+        Label(frame, text= "Menssage: ").grid(row=10, column= 0)
+        self.inputtxt = Text(frame, height = 10, width=25, bg = "light yellow")
+        self.inputtxt.grid(row= 11, column= 0, pady= 2)
+
+        #BTN send message
+        ttk.Button(frame, text= "Enviar Mail").grid(row= 12, columnspan= 2, sticky= W + E, pady=10)
+
+        #BTN back
+        ttk.Button(frame, text= "Volver").grid(row= 13, columnspan= 2, sticky= W + E, pady=10)
 
 if __name__ == '__main__':
     window = Tk()
