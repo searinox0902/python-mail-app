@@ -1,4 +1,3 @@
-from sqlite3 import Cursor
 import pyodbc
 
 try: 
