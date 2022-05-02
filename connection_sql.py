@@ -6,11 +6,11 @@ class ConnectionBD:
 
         try: 
             connection= pyodbc.connect(
-                'DRIVER={SQL server}; SERVER=DESKTOP-7ROJSEE; DATABASE=UNIVERSAL; Trusted_Connection=yes'
+                'DRIVER={SQL server}; SERVER=SVARGAS; DATABASE=appmailpython; Trusted_Connection=yes'
             )
             print("Conexión exitosa")
             cursor = connection.cursor()
-            cursor.execute("SELECT * FROM usuarios")
+            cursor.execute("SELECT * FROM user_data")
             row=cursor.fetchone()
             print(row) 
             rows=cursor.fetchall()
